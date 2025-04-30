@@ -59,40 +59,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Image Pair Section */}
-      <section className="about-section about-images-pair">
-        <motion.div
-          className="about-image-caption"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img src="/images/sound.jpg" alt="Sound of the forest" />
-          <p>Lorem ipsum</p>
-        </motion.div>
-
-        <motion.div
-          className="about-image-caption"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <img src="/images/lidar.jpg" alt="LiDAR scanning" />
-          <p>Lorem upsum</p>
-        </motion.div>
-      </section>
-
-      {/* Closing Philosophy */}
-      <section className="about-section about-philosophy">
-        <motion.blockquote
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-        >
-          "Lorem ipsum"
-        </motion.blockquote>
-      </section>
-
+      
       {/* Credits Section */}
       <section className="about-section about-credits">
         <motion.div
