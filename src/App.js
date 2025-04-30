@@ -22,7 +22,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Thesis" element={<Home />} />
+            <Route path="/Thesis/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/dialogue" element={<Dialogue />} />
             <Route path="/options" element={<Options />} />
