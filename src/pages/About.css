@@ -1,0 +1,105 @@
+.about-scroll-container {
+    background-color: #120d14;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  .about-section {
+    padding: 6vh 8vw;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .about-hero h1 {
+    font-size: 4rem;
+    color: #f0e6ff;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  /* Floating content styling */
+  .about-floating-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Wrapper with alternating alignment */
+  /* Default wrapper */
+.about-paragraph-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Centered layout */
+.about-paragraph-wrapper.center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Left-aligned layout */
+.about-paragraph-wrapper.left {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* Right-aligned layout */
+.about-paragraph-wrapper.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* Split layout (image on one side, block filling the rest) */
+.about-paragraph-wrapper.split {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Angled layout — image off to side and text slightly skewed */
+.about-paragraph-wrapper.angled .about-paragraph-box {
+  transform: rotate(-1.5deg);
+}
+.about-paragraph-wrapper.angled .inline-image {
+  transform: rotate(2deg);
+}
+
+/* Shared box style */
+.about-paragraph-box {
+  background-color: #2b2530;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  flex: 1 1 60%;
+  transition: transform 0.3s ease;
+}
+
+.about-paragraph-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: #f2f2f2;
+}
+
+.about-paragraph-box:hover {
+  transform: translateY(-4px);
+}
+
+/* Image styling */
+.inline-image {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}

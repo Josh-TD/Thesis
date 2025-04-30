@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
-  return <h2>Welcome to the Home Page!</h2>;
+  const navigate = useNavigate();
+  return (
+    <div className="forest-hero" onClick={() => navigate('/options')}>
+      <div className="hero-text">Explore the modern wilderness</div>
+    </div>
+  );
 };
 
 export default Home;

@@ -1,0 +1,26 @@
+.forest-hero {
+    background-image: url('../assets/forest.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    filter: grayscale(40%) brightness(0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .forest-hero:hover {
+    filter: grayscale(0%) brightness(1);
+  }
+  
+  .hero-text {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+  

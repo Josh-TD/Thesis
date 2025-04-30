@@ -1,0 +1,67 @@
+/* Dialogue.css */
+
+/* Main container with padding and font settings */
+.dialogue-container {
+    font-family: 'Georgia', serif;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background: #f4f1ea;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title styling */
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2f3e46;
+  }
+  
+  /* Background section representing a forest ambiance */
+  .forest-backdrop {
+    background: linear-gradient(to bottom, #e6efe9, #dce5dc);
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  /* General line container */
+  .dialogue-line {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-left: 5px solid transparent;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .dialogue-line:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Style for Mother Nature’s lines */
+  .dialogue-line.mother-nature {
+    border-color: #6a994e;
+    background-color: #f0f8f4;
+  }
+  
+  /* Style for Technology’s lines */
+  .dialogue-line.technology {
+    border-color: #3a86ff;
+    background-color: #eef3fc;
+  }
+  
+  /* Speaker heading */
+  .speaker {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+  }
+  
+  /* Dialogue text body */
+  .text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
