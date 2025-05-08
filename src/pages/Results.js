@@ -12,7 +12,10 @@ const Results = () => {
       },
     console.log("done"))
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log("Fetched data:", data);
+            setResponses(data);
+          })
         .catch(err => console.error("Failed to fetch responses:", err));
     } else {
       setResponses([
@@ -92,8 +95,7 @@ const Results = () => {
     acc[val] = (acc[val] || 0) + 1;
     return acc;
   }, {});
-  
-  console.log("Words array for WordCloud:", words);
+
   return (
     <div className="results-container">
      <section className="results-section">
