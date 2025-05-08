@@ -62,7 +62,7 @@ const Form = () => {
         </label>
 
         <label>
-          4) Do you think exploring fantastical (unreflective of reality) mediums in simulation benefits mending our relationship with nature?
+          4) Do you think exploring nature mediums (realistic or non-realistic) in simulation benefits mending our relationship with nature?
           <select name="fantasticalBenefit" value={formData.fantasticalBenefit} onChange={handleChange} required>
             <option value="">Select</option>
             <option value="Yes">Yes</option>
