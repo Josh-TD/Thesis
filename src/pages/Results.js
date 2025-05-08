@@ -11,9 +11,8 @@ const Results = () => {
         method: "GET"
       },
     console.log("done"))
-        .then(() => { 
-          console.log("Request sent (response not available in development).");
-        })
+        .then(response => response.json())
+        .then(data => console.log(data))
         .catch(err => console.error("Failed to fetch responses:", err));
     } else {
       setResponses([
