@@ -68,6 +68,17 @@ const Results = () => {
   const [sparkIndex, setSparkIndex] = useState(0);
   const [addIndex, setAddIndex] = useState(0);
 
+  const [visibleIndices, setVisibleIndices] = useState({
+    word: 0,
+    spark: 0,
+    add: 0,
+  });
+  const [fadeStates, setFadeStates] = useState({
+    word: 'fade-in',
+    spark: 'fade-in',
+    add: 'fade-in',
+  });  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setWordIndex(prev => (prev + 1) % responses.length);
@@ -77,7 +88,27 @@ const Results = () => {
   
     return () => clearInterval(interval);
   }, [responses]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Fade out
+      setFadeStates({ word: 'fade-out', spark: 'fade-out', add: 'fade-out' });
   
+      setTimeout(() => {
+        // Update index
+        setVisibleIndices(prev => ({
+          word: (prev.word + 1) % responses.length,
+          spark: (prev.spark + 1) % responses.length,
+          add: (prev.add + 1) % responses.length,
+        }));
+  
+        // Fade in
+        setFadeStates({ word: 'fade-in', spark: 'fade-in', add: 'fade-in' });
+      }, 800); // Match transition duration
+    }, 4000);
+  
+    return () => clearInterval(interval);
+  }, [responses]);  
 
   const words = responses
   .filter(r => r.Experience) // make sure it's not undefined/null
@@ -101,21 +132,27 @@ const Results = () => {
      <section className="results-section">
   <h2>Word: VR Experience Description</h2>
   <div className="fade-box">
-    <span className="fade-text">{responses[wordIndex]?.Experience}</span>
+    <span className={`fade-text ${fadeStates.word}`}>
+      {responses[visibleIndices.word]?.Experience}
+    </span>
   </div>
 </section>
 
 <section className="results-section">
   <h2>Does VR Spark Interest in Nature?</h2>
   <div className="fade-box">
-    <span className="fade-text">{responses[sparkIndex]?.SparkInterest}</span>
+    <span className={`fade-text ${fadeStates.spark}`}>
+      {responses[visibleIndices.spark]?.SparkInterest}
+    </span>
   </div>
 </section>
 
 <section className="results-section">
   <h2>Suggestions to Make VR Nature More Real</h2>
   <div className="fade-box">
-    <span className="fade-text">{responses[addIndex]?.AddToSim}</span>
+    <span className={`fade-text ${fadeStates.add}`}>
+      {responses[visibleIndices.add]?.AddToSim}
+    </span>
   </div>
 </section>
 
