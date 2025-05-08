@@ -6,24 +6,17 @@ const Results = () => {
 
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
+        console.log("fetching")
       fetch("https://script.google.com/macros/s/AKfycbxwuHEPv73_ZX1aDkpJkwNTWniAKFtzzO5U1siJAqkvuflm2TUWd6ChUNu08yiEo5JlvQ/exec", {
         method: "GET",
-        mode: "no-cors",
-      })
+        mode: "no-cors"
+      },
+    console.log("done"))
         .then(() => {
           console.log("Request sent (response not available in development).");
         })
         .catch(err => console.error("Failed to fetch responses:", err));
-    } else if (process.env.NODE_ENV === "development") {
-        fetch("https://script.google.com/macros/s/AKfycbxwuHEPv73_ZX1aDkpJkwNTWniAKFtzzO5U1siJAqkvuflm2TUWd6ChUNu08yiEo5JlvQ/exec", {
-          method: "GET",
-          mode: "no-cors",
-        })
-          .then(() => {
-            console.log("Request sent (response not available in development).");
-          })
-          .catch(err => console.error("Failed to fetch responses:", err));
-      } else {
+    } else {
       setResponses([
         {
             Experience: "peaceful",
