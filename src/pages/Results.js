@@ -12,7 +12,7 @@ const Results = () => {
         mode: "no-cors"
       },
     console.log("done"))
-        .then(() => {
+        .then(() => { 
           console.log("Request sent (response not available in development).");
         })
         .catch(err => console.error("Failed to fetch responses:", err));
