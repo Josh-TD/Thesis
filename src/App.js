@@ -14,10 +14,11 @@ import Mystical from './pages/Mystical';
 import Form from './pages/Form'; 
 
 import './App.css';
+const basename = process.env.NODE_ENV === 'production' ? '/thesis' : '';
 
 function App() {
   return (
-    <Router basename="/thesis">
+    <Router basename={basename}>
       <div className="app-container">
         <Navbar />
         <main className="main-content">
