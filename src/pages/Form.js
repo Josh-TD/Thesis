@@ -18,7 +18,7 @@ const Form = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("YOUR_WEB_APP_URL_HERE", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbxwuHEPv73_ZX1aDkpJkwNTWniAKFtzzO5U1siJAqkvuflm2TUWd6ChUNu08yiEo5JlvQ/exec", {
         method: "POST",
         mode: "no-cors", // avoid CORS error for Google Sheets
         headers: {
