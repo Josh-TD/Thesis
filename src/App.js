@@ -12,6 +12,7 @@ import ForestClearing from './pages/ForestClearing';
 import ForestNight from './pages/ForestNight';
 import Mystical from './pages/Mystical';
 import Form from './pages/Form'; 
+import Results from './pages/Results';
 
 import './App.css';
 const basename = process.env.NODE_ENV === 'production' ? '/Thesis' : '';
@@ -35,6 +36,7 @@ function App() {
             <Route path="/forestnight" element={<ForestNight />} />
             <Route path="/mystical" element={<Mystical />} /> 
             <Route path="/form" element={<Form />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
         </main>
       </div>
