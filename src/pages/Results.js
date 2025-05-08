@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import WordCloud from 'react-wordcloud';
 import './Results.css';
 
 const Results = () => {
