@@ -14,7 +14,7 @@ import Mystical from './pages/Mystical';
 import Form from './pages/Form'; 
 
 import './App.css';
-const basename = process.env.NODE_ENV === 'production' ? '/thesis' : '';
+const basename = process.env.NODE_ENV === 'production' ? '/Thesis' : '';
 
 function App() {
   return (
