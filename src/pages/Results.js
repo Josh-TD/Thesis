@@ -6,7 +6,7 @@ const Results = () => {
 
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
-      fetch("https://script.google.com/macros/s/YOUR_ID/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxwuHEPv73_ZX1aDkpJkwNTWniAKFtzzO5U1siJAqkvuflm2TUWd6ChUNu08yiEo5JlvQ/exec", {
         method: "GET",
         mode: "no-cors",
       })
