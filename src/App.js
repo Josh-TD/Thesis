@@ -11,12 +11,13 @@ import DeathValley from './pages/DeathValley';
 import ForestClearing from './pages/ForestClearing';
 import ForestNight from './pages/ForestNight';
 import Mystical from './pages/Mystical';
+import Form from './pages/Form'; 
 
 import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/thesis">
       <div className="app-container">
         <Navbar />
         <main className="main-content">
@@ -32,6 +33,7 @@ function App() {
             <Route path="/forestclearing" element={<ForestClearing />} />
             <Route path="/forestnight" element={<ForestNight />} />
             <Route path="/mystical" element={<Mystical />} /> 
+            <Route path="/form" element={<Form />} />
           </Routes>
         </main>
       </div>

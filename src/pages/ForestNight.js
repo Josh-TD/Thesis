@@ -33,7 +33,7 @@ const ForestNight = () => {
     <div className="lakeside-container">
       <BackButton />
       <audio autoPlay loop>
-        <source src="/audio/ForestNight.mp3" type="audio/mpeg" />
+      <source src={`${process.env.PUBLIC_URL}/audio/ForestNight.mp3`} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <iframe
