@@ -39,7 +39,7 @@ const About = () => {
 
       {/* Floating Content Paragraphs with More Diverse Layout */}
       <section className="about-section about-floating">
-        <div className="about-floating-content">
+        <div className="about-floating-content">  
           {paragraphs.map((text, idx) => {
             const layoutClass =
               idx % 5 === 0 ? "center" : idx % 5 === 1 ? "left" : idx % 5 === 2 ? "right" : idx % 5 === 3 ? "split" : "angled";
