@@ -1,6 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./About.css";
+import inline0 from "../assets/images/inline-0.jpg";
+import inline1 from "../assets/images/inline-1.jpg";
+import inline2 from "../assets/images/inline-2.jpg";
+import inline3 from "../assets/images/inline-3.jpg";
+import inline4 from "../assets/images/inline-4.jpg";
+import inline5 from "../assets/images/inline-5.jpg";
+import inline6 from "../assets/images/inline-6.jpg";
+import inline7 from "../assets/images/inline-7.jpg";
+import inline8 from "../assets/images/inline-8.jpg";
+
+const images = [
+  inline0,
+  inline1,
+  inline2,
+  inline3,
+  inline4,
+  inline5,
+  inline6,
+  inline7,
+  inline8,
+];
 
 const About = () => {
   return (
@@ -27,7 +48,7 @@ const About = () => {
               <div key={idx} className={`about-paragraph-wrapper ${layoutClass}`}>
                 {(layoutClass === "left" || layoutClass === "split") && (
                   <motion.img
-                    src={`${process.env.PUBLIC_URL}/images/inline-${idx}.jpg`}
+                    src={images[idx]}
                     alt={`Decorative ${idx}`}
                     className="inline-image"
                     initial={{ opacity: 0, x: -30 }}
@@ -45,7 +66,7 @@ const About = () => {
                 </motion.div>
                 {(layoutClass === "right" || layoutClass === "angled") && (
                   <motion.img
-                    src={`/images/inline-${idx}.jpg`}
+                    src={images[idx]}
                     alt={`Decorative ${idx}`}
                     className="inline-image"
                     initial={{ opacity: 0, x: 30 }}
