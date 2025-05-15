@@ -27,7 +27,7 @@ const About = () => {
               <div key={idx} className={`about-paragraph-wrapper ${layoutClass}`}>
                 {(layoutClass === "left" || layoutClass === "split") && (
                   <motion.img
-                    src={`/images/inline-${idx}.jpg`}
+                    src={`${process.env.PUBLIC_URL}/images/inline-${idx}.jpg`}
                     alt={`Decorative ${idx}`}
                     className="inline-image"
                     initial={{ opacity: 0, x: -30 }}
