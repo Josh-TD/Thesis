@@ -23,6 +23,8 @@ const images = [
   inline8,
 ];
 
+console.log(inline0)
+
 const About = () => {
   return (
     <div className="about-scroll-container">
